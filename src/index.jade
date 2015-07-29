@@ -1,0 +1,14 @@
+doctype html
+html(ng-app="chummerApp")
+head
+    script(src="assets/libs.min.js")
+    script(src="app.js")
+    script(src="dados.factory.js")
+    script(src="main.controller.js")
+    
+body(ng-controller="mainController")
+    p La tirada de hoy es ....
+    <button ng-click="reroll()"> Reroll</button>
+    br
+    {{dados}}
+
