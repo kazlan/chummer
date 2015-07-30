@@ -6,9 +6,11 @@ head
     title Chummer - Shadowrun campaign Manager
     link(href="assets/libs.css" rel="stylesheet" type="text/css")
     link(href="css/estilos.css" rel="stylesheet" type="text/css")
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css')
     script(src="assets/libs.min.js")
     script(src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.5.0/angular-material-icons.min.js")
     script(src="app.js")
+    script(src="router.js")
     script(src="modelos/personaje.model.js")
     script(src="character.factory.js")
     script(src="dados.factory.js")
@@ -16,11 +18,31 @@ head
     
 body(ng-controller="mainController")
     md-toolbar
-        .md-toolbar-tools(layout-align flex style="text-align: center;")
+        .md-toolbar-tools
             h2 Chummer v0.0.1
-    h4 {{player1.nombre}}
-    p phys: {{player1.phys}} Mental: {{player1.mental}}
-    <button ng-click="reroll()"> Reroll</button>
-    br
-    {{dados}}
+            span(flex)
+            md-button.md-icon-button
+                ng-md-icon(icon="perm_identity" size=32 style="fill:white")
+    //h4 {{player1.nombre}}
+    //p phys: {{player1.phys}} Mental: {{player1.mental}}
+    //<button ng-click="reroll()"> Reroll</button>
+    //br
+    //{{dados}}
+    .spacer &nbsp;
+    .acciones(layout="row" layout-align="space-around center")
+        .gestion_personajes
+            md-card.md-whiteframe-z4
+                img.md-card-image(src="assets/img/catgirl.jpg")
+                md-card-content
+                    h2.md-title Personajes
+        .gestion_combates
+            md-card.md-whiteframe-z4
+                img.md-card-image(src="assets/img/combat.jpg")
+                md-card-content
+                    h2.md-title Combates
+        .gestion_historia
+            md-card.md-whiteframe-z4
+                img.md-card-image(src="assets/img/history.png")
+                md-card-content
+                    h2.md-title Historias
 

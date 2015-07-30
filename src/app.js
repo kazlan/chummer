@@ -1,1 +1,1 @@
-angular.module("chummerApp",['ngMaterial','ngMdIcons','firebase']);
+angular.module("chummerApp",['ngRoute','ngMaterial','ngMdIcons','firebase']);
