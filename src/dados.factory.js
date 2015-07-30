@@ -13,7 +13,6 @@
         return service;
         
         /////////////////////////
-        
         // lanzamiento de dados
         // params:
         //      - numero de dados

@@ -1,1 +1,1 @@
-angular.module("chummerApp",[]);
+angular.module("chummerApp",['ngMaterial','firebase']);
