@@ -131,8 +131,16 @@ module.exports = (grunt) ->
                     src: ['**/*.js']
                     dest: 'build'
                 ]
+            assets:
+                files: [
+                    expand: true
+                    cwd: 'src/assets/'
+                    src: ['**/*.*']
+                    dest: 'build/assets/'
+                ]
 
     # Conjuntos de tareas (default para lanzar grunt sin nada más)
     grunt.registerTask 'server', ['default', 'browserSync','watch']
+    grunt.registerTask 'assets', ['copy:assets']
     grunt.registerTask 'default', ['concat:libs','newer:uglify','newer:jade','newer:coffee','newer:sass','newer:stylus']
 
