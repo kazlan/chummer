@@ -4,12 +4,15 @@
         .module('chummerApp')
         .controller('mainController', mainController);
     
-    mainController.$inject = ['$scope','dados'];
+    mainController.$inject = ['$scope','character'];
     
-    function mainController($scope, dados){
-        $scope.dados = dados.throwDice(4,6,4,true);
+    function mainController($scope, character){
+        
+        $scope.player1 = character.nuevo();
+        $scope.dados = $scope.player1.tirarDados(4,true);
+        
         $scope.reroll = function(){
-            $scope.dados = dados.throwDice(4,6,4,true);
+            $scope.dados = $scope.player1.tirarDados(4,true);
         };
     }
     

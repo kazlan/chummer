@@ -1,13 +1,25 @@
 doctype html
 html(ng-app="chummerApp")
 head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Chummer - Shadowrun campaign Manager
+    link(href="assets/libs.css" rel="stylesheet" type="text/css")
+    link(href="css/estilos.css" rel="stylesheet" type="text/css")
     script(src="assets/libs.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.5.0/angular-material-icons.min.js")
     script(src="app.js")
+    script(src="modelos/personaje.model.js")
+    script(src="character.factory.js")
     script(src="dados.factory.js")
     script(src="main.controller.js")
     
 body(ng-controller="mainController")
-    p La tirada de hoy es ....
+    md-toolbar
+        .md-toolbar-tools(layout-align flex style="text-align: center;")
+            h2 Chummer v0.0.1
+    h4 {{player1.nombre}}
+    p phys: {{player1.phys}} Mental: {{player1.mental}}
     <button ng-click="reroll()"> Reroll</button>
     br
     {{dados}}

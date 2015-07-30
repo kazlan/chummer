@@ -10,6 +10,8 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks 'grunt-contrib-concat'
     grunt.loadNpmTasks 'grunt-bower-install'
     grunt.loadNpmTasks 'grunt-contrib-copy'
+    grunt.loadNpmTasks 'grunt-bower-main'
+    grunt.loadNpmTasks 'grunt-wiredep'
     grunt.loadNpmTasks 'grunt-newer'
 
     grunt.initConfig
