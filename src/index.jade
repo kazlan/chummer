@@ -9,40 +9,17 @@ head
     link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css')
     script(src="assets/libs.min.js")
     script(src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.5.0/angular-material-icons.min.js")
+    // Scripts básicos
     script(src="app.js")
     script(src="router.js")
+    // Modelos de datos
     script(src="modelos/personaje.model.js")
+    // Servicios
     script(src="character.factory.js")
     script(src="dados.factory.js")
+    // Controllers
+    script(src="personajes.controller.js")
     script(src="main.controller.js")
     
-body(ng-controller="mainController")
-    md-toolbar
-        .md-toolbar-tools
-            h2 Chummer v0.0.1
-            span(flex)
-            md-button.md-icon-button
-                ng-md-icon(icon="perm_identity" size=32 style="fill:white")
-    //h4 {{player1.nombre}}
-    //p phys: {{player1.phys}} Mental: {{player1.mental}}
-    //<button ng-click="reroll()"> Reroll</button>
-    //br
-    //{{dados}}
-    .spacer &nbsp;
-    .acciones(layout="row" layout-align="space-around center")
-        .gestion_personajes
-            md-card.md-whiteframe-z4
-                img.md-card-image(src="assets/img/catgirl.jpg")
-                md-card-content
-                    h2.md-title Personajes
-        .gestion_combates
-            md-card.md-whiteframe-z4
-                img.md-card-image(src="assets/img/combat.jpg")
-                md-card-content
-                    h2.md-title Combates
-        .gestion_historia
-            md-card.md-whiteframe-z4
-                img.md-card-image(src="assets/img/history.png")
-                md-card-content
-                    h2.md-title Historias
-
+body
+    .ng-view.slideup

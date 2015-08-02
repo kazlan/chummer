@@ -1,0 +1,17 @@
+md-content(ng-controller="personajesController")
+    .personajes(layout="row" layout-padding layout-margin)
+        md-list(flex=48)
+            md-subheader.md-no-sticky Personajes disponibles
+            md-list-item.md-2-line(ng-hide="personajes.length == 0")
+                md-list-item-text
+                    h3 No hay personajes que mostrar
+                
+            md-list-item.md-2-line(ng-click='$log.log("clickie")')
+                img.md-avatar(ng-src="assets/avatars/Elfos/mujer/pc_elffemale_10a_punkdecker.png")
+                .md-list-item-text
+                    h3 Crear un nuevo personaje
+                    p A la derecha encontrarás la plantilla
+        .detalle(flex=48)
+            p Envia perfil por defecto a firebase
+            md-button.md-raised.md-warn(ng-click="guarda_char()") Guardar el personaje
+

@@ -1,0 +1,19 @@
+md-content(ng-controller="mainController")
+    .spacer &nbsp;
+    .acciones(layout="row" layout-align="space-around center")
+        .gestion_personajes
+            a(href="#/personajes")
+                md-card.md-whiteframe-z4
+                    img.md-card-image(src="assets/img/catgirl.jpg")
+                    md-card-content
+                        h2.md-title Personajes
+        .gestion_combates
+            md-card.md-whiteframe-z4
+                img.md-card-image(src="assets/img/combat.jpg")
+                md-card-content
+                    h2.md-title Combates
+        .gestion_historia
+            md-card.md-whiteframe-z4
+                img.md-card-image(src="assets/img/history.png")
+                md-card-content
+                    h2.md-title Historias

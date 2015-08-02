@@ -1,6 +1,6 @@
 angular
     .module('chummerApp')
-    .config(['$routeprovider',
+    .config(['$routeProvider',
         function($routeProvider){
             $routeProvider.
                 when('/',{
@@ -10,6 +10,14 @@ angular
                 .when('/personajes',{
                     templateUrl: 'views/personajes.html',
                     controller: 'personajesController'
+                })
+                .when('/combate',{
+                    templateUrl: 'views/combate.html',
+                    controller: 'combateController'
+                })
+                .when('/historia',{
+                    templateUrl: 'views/historia.html',
+                    controller: 'historiaController'
                 })
                 .otherwise({
                     redirectTo: '/'

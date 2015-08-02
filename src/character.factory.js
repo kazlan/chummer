@@ -2,12 +2,16 @@
 angular.module('chummerApp')
     .factory('character', characterFactory);
 
-    characterFactory.$inject = ['dados'];
+    characterFactory.$inject = ['dados','$firebaseArray'];
     
-
-    function characterFactory(dados){
+    function characterFactory(dados, $firebaseArray){
+        
+        var ref = new Firebase('https://chummer.firebaseio.com/personajes');
+        var fbPersonajes = $firebaseArray(ref);
+        
         var factory = {
-            nuevo: new_char
+            nuevo: new_char,
+            save: save_char
         };
         return factory;
     
@@ -17,6 +21,11 @@ angular.module('chummerApp')
             var char = new personaje();
             char.tirarDados = dados.throwDice;
             return char;
+        }
+        
+        function save_char(ficha){
+            console.log(ficha);
+            fbPersonajes.$add(ficha);
         }
     }
     

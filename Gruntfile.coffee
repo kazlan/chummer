@@ -108,9 +108,9 @@ module.exports = (grunt) ->
                         'bower_components/angular-animate/angular-animate.js',
                         'bower_components/angular-aria/angular-aria.js',
                         'bower_components/angular-material/angular-material.js',
-                        'bower_components/angularfire/dist/angularfire.js',
-                        'bower_components/angular-route/angular-route.js',
                         'bower_components/firebase/firebase.js'
+                        'bower_components/angularfire/dist/angularfire.js',
+                        'bower_components/angular-route/angular-route.js'
                         ]
                     'build/assets/libs.css': [
                         'bower_components/angular-material/angular-material.css'
