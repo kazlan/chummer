@@ -11,7 +11,9 @@ angular.module('chummerApp')
         
         var factory = {
             nuevo: new_char,
-            save: save_char
+            save: save_char,
+            getAll: getAll,
+            remove: remove
         };
         return factory;
     
@@ -23,9 +25,16 @@ angular.module('chummerApp')
             return char;
         }
         
+        function getAll(){
+            return fbPersonajes;
+        }
+        
         function save_char(ficha){
-            console.log(ficha);
             fbPersonajes.$add(ficha);
+        }
+        function remove(ficha){
+            fbPersonajes.$remove(ficha);
+            console.log(ficha + "removed");
         }
     }
     
