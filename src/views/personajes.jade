@@ -15,7 +15,7 @@ md-content(ng-controller="personajesController")
         .detalle(flex=48)
             p Envia perfil por defecto a firebase
             
-            .(ng-show="currentChar")
+            .derecha(ng-show="currentChar")
                 h2 {{currentChar.Nombre}}
                 h4 {{currentChar.raza}} - {{currentChar.sexo}}
                 hr

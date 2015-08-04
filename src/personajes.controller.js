@@ -7,6 +7,7 @@ angular
 
     function personajesController($scope, character){
         
+        $scope.actualChar = null;
         $scope.personajesAll = character.getAll();
         
         $scope.guarda_char = function (){
@@ -19,10 +20,10 @@ angular
         };
         $scope.remove_char = function(id){
             console.log(id);
-            character.remove(id);
+            //character.remove(id);
+            $scope.actualChar = id;
         };
-        
-        $scope.actualChar = null;
+
         $scope.new_ficha = function() {
             console.log('lala');
             $scope.actualChar = character.nuevo();

@@ -34,7 +34,6 @@ angular.module('chummerApp')
         }
         function remove(ficha){
             fbPersonajes.$remove(ficha);
-            console.log(ficha + "removed");
         }
     }
     
